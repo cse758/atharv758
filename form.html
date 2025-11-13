@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>FORM HTML</legend>
+         <label>Your name</label>
+         <input type="text" placeholder="enter your name" required ><br><br>
+         <label>Your contact</label>
+         <input type="tel" placeholder="enter your number" minlength="10" maxlength="10"><br><br>
+        <label>Your password</label>
+         <input type="password" placeholder="enter your password" required><br><br>
+         <label>Your gender</label>
+         <input type="radio" name="gender">Male
+         <input type="radio" name="gender">Female<br><br>
+
+         <label>Your Branch</label>
+         <input list="branch">
+         <datalist id="branch">
+            <option value="CSE15"></option>
+            <option value="CSE16"></option>
+            <option value="CSE17"></option>
+            <option value="CSE18"></option>
+            <option value="CSE19"></option>
+         </datalist><br><br>
+
+         <label>Your subject</label>
+         <input type="checkbox" checked>Math
+         <input type="checkbox" >physics
+         <input type="checkbox" >electrical
+         <input type="checkbox" >cad
+         <input type="checkbox" >dsa <br><br>
+
+         <label>Your DOB</label>
+         <input type="date"><br><br>
+
+         <label>Your file</label>
+         <input type="file"><br><br>
+
+         <label>Your jee score</label>
+         <input type="range"><br><br>
+
+         <label>Select your core subject</label>
+         <select >
+            <option>select your course</option>
+            <option value="OS1">OS1</option>
+            <option value="OS2">OS2</option>
+            <option value="OS3">OS3</option>
+            <option value="OS4">OS4</option>
+         </select>
+         
+         <br><br>
+
+        <label>enter your response</label>
+        <textarea placeholder="your message"></textarea><br><br>
+
+         <input type="submit" value="Submit">
+         <input type="reset" value="Reset"><br>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

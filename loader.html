@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layered Loader with Color-Changing Center</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: aliceblue;
+    }
+
+    #sc {
+      height: 210px;
+      width: 210px;
+      animation: scale 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes scale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .loader, .load, .loadd {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 16px solid #f3f3f3;
+    }
+
+    .loader {
+      height: 200px;
+      width: 200px;
+      border-top: 16px solid blue;
+      animation: spin 2s linear infinite;
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+    }
+
+    .load {
+      height: 160px;
+      width: 160px;
+      border-bottom: 16px solid yellow;
+      animation: spin1 2s linear infinite;
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+    }
+
+    .loadd {
+      height: 120px;
+      width: 120px;
+      border-top: 16px solid red;
+      animation: spin2 3s linear infinite;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spin1 {
+      from { transform: rotate(180deg); }
+      to { transform: rotate(540deg); }
+    }
+
+    @keyframes spin2 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    .center {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      animation: colorChange 8s linear infinite;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes colorChange {
+      0%   { background-color: red; }
+      25%  { background-color: yellow; }
+      50%  { background-color: limegreen; }
+      75%  { background-color: dodgerblue; }
+      100% { background-color: red; }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="sc">
+    <div class="loader">
+      <div class="load">
+        <div class="loadd">
+          <div class="center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
